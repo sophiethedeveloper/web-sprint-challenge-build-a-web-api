@@ -61,10 +61,26 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
-1. Understand and explain the use of Middleware?
-1. The basic principles of the REST architectural style.
-1. Understand and explain the use of Express Routers.
-1. Describe tooling used to manually test the correctness of an API.
+
+    **Node allow us to write JS on the server, it is single-threaded, it is asynchronous and it gives us access to the npm repository. These features are useful because we can use the same programming language for both, the front and back end. Single threads removes the complexity involved when managing multiple threads, also since Node runs asynchronous its process can run in a single CPU and the npm ecosystem has access to many useful libraries. 
+
+    **Express is a light unopinionated framework that sits on top of Node and it makes it easier to create web applications and services. With Express we can build web applications, single page applications, build RESTful web services that works with JSON, serve static content like HTML files, images, audio files, PDFs  and more. 
+
+2. Understand and explain the use of Middleware?
+
+    **Middleware extends code and allows us to dry our code.
+
+3. The basic principles of the REST architectural style.
+
+    **Uniform interface, client-server, stateless, cacheable, layered system, and code on demand
+
+4. Understand and explain the use of Express Routers.
+
+    Express routers allows us to navigate to different endpoints using the same HTTP method but different URLs
+
+5. Describe tooling used to manually test the correctness of an API.
+
+    **Postman allows to test all Crud operations. We select the operation that we need to test, then we provide the api and in the case of post and put we write the required information in the body as raw and in JSON format
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
