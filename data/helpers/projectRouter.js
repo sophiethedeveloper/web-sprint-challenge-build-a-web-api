@@ -16,6 +16,16 @@ router.get('/:id', (req, res) => {
     })
 })
 
+router.post('/', (req, res) => {
+    Project.insert(req.body)
+    .then((newProject) => {
+        res.status(200).json(newProject)
+    })
+    .catch((error) => {
+        res.status(500).json({message: error.message})
+    })
+})
+
 router.put('/:id', (req, res) => {
     const { id } = req.params
     const changes = req.body
@@ -23,6 +33,16 @@ router.put('/:id', (req, res) => {
     Project.update(id, changes)
     .then((update) => {
         res.status(200).json(update)
+    })
+    .catch((error) => {
+        res.status(500).json({message: error.message})
+    })
+})
+
+router.delete('/:id', (req, res) => {
+    Project.remove(req.params.id)
+    .then(() => {
+        res.status(200).json({message: 'A project has been deleted!'})
     })
     .catch((error) => {
         res.status(500).json({message: error.message})
